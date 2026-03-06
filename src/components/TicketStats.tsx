@@ -76,7 +76,7 @@ export const TicketStats = () => {
         {/* Footer */}
         <div className="flex items-center justify-between mt-3">
           <p className="text-xs text-muted-foreground font-mono">
-            Source: OfficeAmp Tickets
+            Source: OfficeAmp Tickets &nbsp;·&nbsp; As at 5th March
           </p>
           <a
             href={TICKET_LINK}
