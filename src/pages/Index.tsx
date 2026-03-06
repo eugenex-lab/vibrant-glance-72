@@ -45,7 +45,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             IT Support Overview
           </h1>
-          <p className="text-muted-foreground text-lg">2 – 5 March 2025</p>
+          <p className="text-muted-foreground text-lg">2 – 6 March 2025</p>
         </header>
 
         {/* Ticket Stats */}
@@ -61,6 +61,9 @@ const Index = () => {
               subtitle="Shared Collaboration Setup"
               description="Researched and implemented a shared Google Drive structure with proper access control to improve cross-team collaboration and document management."
               checklist="Google Drive Sankore Revamp"
+              checklistLink="https://docs.google.com/spreadsheets/d/1El9Yd9nhMh91Q4okhRNXoee-ZeuZfrZ4RncGAq2Timw/edit?gid=0#gid=0"
+              completion={100}
+              completed
             />
             <ReportSection
               number="2"
@@ -68,6 +71,22 @@ const Index = () => {
               subtitle="IT Equipment Status"
               description="Reviewed laptop performance issues and provided temporary replacements where needed. Also assessing printer vendor costs to optimize infrastructure management."
               checklist="Laptop Status Sheet"
+              checklistLink="https://docs.google.com/spreadsheets/d/19vg8lGVQjvHiDYfbSENDRWssPIxVjvLvhMHpCZBOzZg/edit?gid=0#gid=0"
+              completion={100}
+              extraContent={
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="bg-tertiary/10 rounded-md p-2.5">
+                    <p className="font-semibold text-tertiary mb-1">✅ Fixable / Good</p>
+                    <p className="text-muted-foreground">Bad battery, keyboard, or good condition</p>
+                    <p className="text-lg font-bold text-foreground mt-1">11</p>
+                  </div>
+                  <div className="bg-destructive/10 rounded-md p-2.5">
+                    <p className="font-semibold text-destructive mb-1">⚠️ Replacement</p>
+                    <p className="text-muted-foreground">Bad screen, body, overheating, RAM</p>
+                    <p className="text-lg font-bold text-foreground mt-1">6</p>
+                  </div>
+                </div>
+              }
             />
           </div>
         </section>
@@ -80,11 +99,14 @@ const Index = () => {
               title="BVN Verification Service Interruption"
               description="Wealth.ng clients could not verify BVN through QoreID due to an expired subscription."
               action="Subscription renewal payment completed. Service restoration expected once processed by the provider."
+              resolved
             />
             <ChallengeCard
               title="User Work Tool Performance Issues"
               description="Multiple users in HQ and Juno offices reported recurring laptop performance problems."
               action="Inventory assessment ongoing to identify devices for repair and redeployment."
+              link="https://docs.google.com/spreadsheets/d/19vg8lGVQjvHiDYfbSENDRWssPIxVjvLvhMHpCZBOzZg/edit?gid=0#gid=0"
+              linkLabel="View Laptop Status"
             />
           </div>
         </section>
