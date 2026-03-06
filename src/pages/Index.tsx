@@ -49,7 +49,7 @@ const Index = () => {
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated background */}
       <div
-        className="fixed inset-0 animated-bg opacity-25 dark:opacity-15"
+        className="fixed inset-0 animated-bg opacity-25 dark:opacity-[0.07]"
         style={{
           backgroundImage: `url(${bgNetwork})`,
           backgroundSize: "cover",
