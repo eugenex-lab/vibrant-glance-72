@@ -77,7 +77,7 @@ const Index = () => {
               IT Support Overview
             </h1>
             <p className="text-xs font-mono tracking-widest uppercase text-tertiary mt-0.5">
-              Weekly Report &nbsp;·&nbsp; 2 – 6 March 2025
+              Weekly Report &nbsp;·&nbsp; 2 – 6 March 2026
             </p>
           </div>
 
@@ -159,8 +159,9 @@ const Index = () => {
             <ChallengeCard
               title="BVN Verification Service Interruption"
               description="Wealth.ng clients could not verify BVN through QoreID due to an expired subscription."
-              action="Subscription renewal payment completed. Service restoration expected once processed by the provider."
-              resolved
+              action="Finance payment has been made as at today, but card payment is pending on Khalid to restore full service."
+              completion={90}
+              cost="Subscription"
             />
             <ChallengeCard
               title="User Work Tool Performance Issues"

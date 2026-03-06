@@ -7,29 +7,68 @@ interface Props {
   resolved?: boolean;
   link?: string;
   linkLabel?: string;
+  completion?: number;
+  cost?: string;
 }
 
-export const ChallengeCard = ({ title, description, action, resolved, link, linkLabel }: Props) => (
-  <div className="rounded-lg border border-border bg-card/80 backdrop-blur-sm p-5">
+export const ChallengeCard = ({
+  title,
+  description,
+  action,
+  resolved,
+  link,
+  linkLabel,
+  completion,
+  cost,
+}: Props) => (
+  <div className="rounded-lg border border-border bg-card/80 backdrop-blur-sm p-5 card-glow">
     <div className="flex items-center justify-between mb-3">
       <div className="flex items-center gap-2">
         <AlertTriangle size={16} className="text-secondary" />
         <h3 className="font-semibold text-foreground">{title}</h3>
       </div>
-      {resolved && (
-        <span className="flex items-center gap-1 text-xs font-mono bg-tertiary/20 text-tertiary rounded-full px-2 py-0.5">
-          <CheckCircle2 size={12} />
-          Resolved
-        </span>
-      )}
+      <div className="flex items-center gap-2">
+        {cost && (
+          <span className="text-[10px] font-mono bg-secondary/20 text-secondary border border-secondary/20 rounded px-1.5 py-0.5">
+            COST: {cost}
+          </span>
+        )}
+        {resolved && (
+          <span className="flex items-center gap-1 text-xs font-mono bg-tertiary/20 text-tertiary rounded-full px-2 py-0.5">
+            <CheckCircle2 size={12} />
+            Resolved
+          </span>
+        )}
+      </div>
     </div>
     <p className="text-sm text-muted-foreground mb-3">{description}</p>
+
+    {completion !== undefined && (
+      <div className="mb-4 space-y-1">
+        <div className="flex justify-between text-[10px] uppercase tracking-wider font-bold">
+          <span className="text-muted-foreground">Resolution Progress</span>
+          <span className="text-tertiary">{completion}%</span>
+        </div>
+        <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden">
+          <div
+            className="h-full bg-tertiary rounded-full transition-all duration-500 ease-out"
+            style={{ width: `${completion}%` }}
+          />
+        </div>
+      </div>
+    )}
+
     <div className="flex items-start gap-2 bg-tertiary/10 rounded-md p-3">
       <CheckCircle2 size={14} className="text-tertiary mt-0.5 flex-shrink-0" />
       <p className="text-xs text-muted-foreground">{action}</p>
     </div>
     {link && (
-      <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-xs text-tertiary hover:underline mt-3">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-xs text-tertiary hover:underline mt-3"
+      >
         <ExternalLink size={12} />
         {linkLabel || "View Details"}
       </a>
