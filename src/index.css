@@ -1,11 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* ── Light theme (default) ── */
+  /* Brand: #0b1b3e (navy) · #c5c58f (gold) · #91c4bc (soft teal) */
   :root {
+    --background: 210 30% 97%;
+    --foreground: 222 70% 14%; /* #0b1b3e navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 70% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 70% 14%;
+
+    --primary: 222 70% 14%; /* #0b1b3e */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 32% 52%; /* #c5c58f gold — slightly darkened for readability */
+    --secondary-foreground: 0 0% 100%;
+
+    --tertiary: 171 30% 40%; /* #91c4bc teal — darkened for readability on white */
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 216 20% 92%;
+    --muted-foreground: 222 25% 40%; /* navy-toned grey, NOT teal */
+
+    --accent: 222 70% 14%; /* navy accent (not teal) */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 20% 84%;
+    --input: 216 20% 84%;
+    --ring: 60 32% 52%; /* gold ring (not teal) */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 30% 98%;
+    --sidebar-foreground: 222 70% 14%;
+    --sidebar-primary: 222 70% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 94%;
+    --sidebar-accent-foreground: 222 70% 14%;
+    --sidebar-border: 216 20% 84%;
+    --sidebar-ring: 60 32% 52%;
+  }
+
+  /* ── Dark theme ── */
+  .dark {
     --background: 216 70% 15%;
     --foreground: 60 30% 92%;
 
@@ -37,8 +84,6 @@
     --input: 216 40% 25%;
     --ring: 168 30% 67%;
 
-    --radius: 0.75rem;
-
     --sidebar-background: 216 65% 10%;
     --sidebar-foreground: 60 30% 92%;
     --sidebar-primary: 168 30% 67%;
@@ -61,14 +106,26 @@
 }
 
 @keyframes bg-drift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
+  25% {
+    transform: scale(1.08) translate(-10px, -6px);
+  }
+  50% {
+    transform: scale(1.05) translate(-18px, 6px);
+  }
+  75% {
+    transform: scale(1.08) translate(-6px, -10px);
+  }
+  100% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
 }
 
 .animated-bg {
-  background-size: 200% 200%;
-  animation: bg-drift 30s ease-in-out infinite;
+  animation: bg-drift 40s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes fade-in-up {
@@ -87,8 +144,13 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(168 30% 67% / 0.1); }
-  50% { box-shadow: 0 0 30px hsl(168 30% 67% / 0.2); }
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(168 30% 67% / 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(168 30% 67% / 0.2);
+  }
 }
 
 .card-glow {
