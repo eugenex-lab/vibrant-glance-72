@@ -133,4 +133,79 @@ export const weeklyReports: WeeklyReport[] = [
       },
     ],
   },
+  {
+    id: "week-2026-03-16",
+    weekLabel: "16 – 27 March 2026",
+    weekStart: "2026-03-16",
+    month: "March 2026",
+    tickets: {
+      total: 18,
+      resolved: 18,
+      categories: [
+        { label: "Software & Productivity", count: 6, icon: "Monitor" },
+        { label: "Hardware & Peripherals", count: 4, icon: "Laptop" },
+        { label: "Email & Group Access", count: 4, icon: "Mail" },
+        { label: "Security & Accounts", count: 4, icon: "KeyRound" },
+      ],
+      source: "OfficeAmp Requests Log",
+      asAt: "27th March",
+    },
+    projects: [
+      {
+        title: "Strategic Recovery & Infrastructure Optimization",
+        subtitle: "8-Business-Day Sprint",
+        description:
+          "Over a focused 8-business-day sprint, a high-priority task to clear a backlog of critical hardware failures and modernize our local imaging workflow. This initiative was designed to eliminate recurring technical debt and stabilize productivity tools.",
+        checklist: "Hardware Recovery & HP Smart Deployment",
+        completion: 100,
+        completed: true,
+      },
+      {
+        title: "Phase I: Vendor Escalation & Hardware Recovery",
+        subtitle: "Laptop & Printer Repair Lifecycle",
+        description:
+          "Full ownership of a surge in laptop and printer malfunctions. Liaised with external vendors, managing end-to-end repair lifecycle. By centralizing communication and enforcing strict SLAs, all faulty hardware was either restored to peak performance or scheduled for immediate replacement, significantly reducing mean time to repair.",
+        checklist: "Vendor Escalation Tracker",
+        completion: 100,
+        completed: true,
+      },
+      {
+        title: "Phase II: HP Smart Integration & Workflow Automation",
+        subtitle: "Proactive Support Model",
+        description:
+          "Deployed and configured HP Smart across the fleet to replace outdated drivers causing daily print-spooler crashes. Unified scanning, printing, and diagnostics into one dashboard, configured Smart Tasks for automated remote scanning to cloud directories, and enabled real-time telemetry for autonomous maintenance alerts.",
+        checklist: "HP Smart Deployment",
+        completion: 100,
+        completed: true,
+      },
+    ],
+    challenges: [
+      {
+        title: "Hardware Lifecycle Management",
+        description:
+          "Aging assets lead to 'micro-downtime' where cumulative system slowness results in significant productivity loss. Managing ethical disposal of End-of-Life units while maintaining inventory accuracy is increasingly complex.",
+        action:
+          "Ongoing inventory assessment and asset lifecycle planning to identify devices for repair, redeployment, or retirement.",
+      },
+      {
+        title: "Critical Security Vulnerabilities",
+        description:
+          "Legacy systems reaching 'Security EOL' where manufacturers no longer release firmware updates, leaving permanent backdoors. Outdated BIOS and TPM versions fail to support modern encryption standards.",
+        action:
+          "Prioritizing firmware updates where possible and flagging unpatchable hardware for scheduled replacement to close security gaps.",
+      },
+    ],
+    upcomingPlans: [
+      {
+        title: "Post-Easter Knowledge Sharing Session",
+        description:
+          "Bridge technical gaps, formalize undocumented expertise exchange, refresh cyber-hygiene protocols, and train on standardized IT tool handling to reduce user error and ticket volume.",
+      },
+      {
+        title: "Infrastructure Maintenance & Security Hardening",
+        description:
+          "Deploy critical printer fleet firmware patches to mitigate IoT vulnerabilities, and schedule vendor on-site maintenance for hardware audits, sensor calibration, and preventative parts replacement.",
+      },
+    ],
+  },
 ];
