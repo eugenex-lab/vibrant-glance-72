@@ -60,7 +60,7 @@ const Index = () => {
       <div className="fixed inset-0 bg-gradient-to-br from-background/70 via-background/80 to-background/75 dark:from-background/90 dark:via-background/92 dark:to-background/88" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-10 space-y-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 py-10 space-y-8 bg-background/60 dark:bg-transparent rounded-3xl backdrop-blur-sm my-4">
         {/* Header */}
         <header className="flex items-center justify-between gap-4 animate-fade-in-up">
           <div className="bg-primary p-2 sm:p-2.5 rounded-2xl border border-primary/20 shadow-lg transition-transform hover:scale-105 duration-300 shrink-0">
