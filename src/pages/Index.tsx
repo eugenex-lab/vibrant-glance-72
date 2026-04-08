@@ -4,7 +4,7 @@ import { weeklyReports } from "@/data/reports";
 import { ReportNav } from "@/components/ReportNav";
 import { WeeklyReportView } from "@/components/WeeklyReportView";
 import { MonthlySummary } from "@/components/MonthlySummary";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, ArrowLeft } from "lucide-react";
 
 const Index = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -63,12 +63,23 @@ const Index = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-10 space-y-8 bg-background/60 dark:bg-transparent rounded-3xl backdrop-blur-sm my-4">
         {/* Header */}
         <header className="flex items-center justify-between gap-4 animate-fade-in-up">
-          <div className="bg-primary p-2 sm:p-2.5 rounded-2xl border border-primary/20 shadow-lg transition-transform hover:scale-105 duration-300 shrink-0">
-            <img
-              src="https://sankore.com/images/SankoreWhiteLogo2023.png"
-              alt="Sankore"
-              className="h-6 sm:h-7 opacity-95"
-            />
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Back to Hub */}
+            <a
+              href="https://client-inflow.vercel.app"
+              className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest text-muted-foreground/40 hover:text-foreground transition-colors group"
+            >
+              <ArrowLeft className="h-3 w-3 group-hover:-translate-x-0.5 transition-transform" />
+              <span className="hidden sm:inline">Hub</span>
+            </a>
+            <div className="w-px h-4 bg-border/40" />
+            <div className="bg-primary p-2 sm:p-2.5 rounded-2xl border border-primary/20 shadow-lg transition-transform hover:scale-105 duration-300">
+              <img
+                src="https://sankore.com/images/SankoreWhiteLogo2023.png"
+                alt="Sankore"
+                className="h-6 sm:h-7 opacity-95"
+              />
+            </div>
           </div>
 
           <div className="flex-1 text-center">
