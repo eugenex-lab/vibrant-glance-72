@@ -67,10 +67,10 @@ const Index = () => {
             {/* Back to Hub */}
             <a
               href="https://client-inflow.vercel.app"
-              className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest text-muted-foreground/40 hover:text-foreground transition-colors group"
+              className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/70 hover:text-foreground transition-colors group"
             >
-              <ArrowLeft className="h-3 w-3 group-hover:-translate-x-0.5 transition-transform" />
-              <span className="hidden sm:inline">Hub</span>
+              <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-0.5 transition-transform" />
+              <span>Innovation Hub</span>
             </a>
             <div className="w-px h-4 bg-border/40" />
             <div className="bg-primary p-2 sm:p-2.5 rounded-2xl border border-primary/20 shadow-lg transition-transform hover:scale-105 duration-300">
