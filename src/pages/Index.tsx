@@ -66,7 +66,7 @@ const Index = () => {
           <div className="flex items-center gap-3 shrink-0">
             {/* Back to Hub */}
             <a
-              href="https://client-inflow.vercel.app"
+              href="https://sankore-automation.vercel.app"
               className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 hover:bg-primary/15 text-[10px] font-bold uppercase tracking-widest text-primary transition-all group backdrop-blur-md"
             >
               <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform" />
